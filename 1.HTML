@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Secret Garden Café | A Magical Dining Experience</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="2.CSS">
+</head>
+<body>
+    <!-- Night Mode Toggle -->
+    <div class="mode-toggle">
+        <input type="checkbox" id="night-mode">
+        <label for="night-mode" class="toggle-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="toggle-ball"></span>
+        </label>
+    </div>
+
+    <!-- Ambient Sound Toggle -->
+    <div class="sound-toggle">
+        <button id="sound-btn"><i class="fas fa-music"></i></button>
+        <audio id="ambient-sound" loop src="sounds/garden-ambience.mp3"></audio>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">The Secret Garden Café</a>
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="petals"></div>
+        <div class="fireflies"></div>
+        <div class="hero-content">
+            <h1>Welcome to <span>The Secret Garden Café</span></h1>
+            <p class="subtitle">Where magic meets culinary artistry in an enchanted garden setting</p>
+            <a href="#about" class="cta-button">Begin Your Journey</a>
+        </div>
+        <div class="scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>Our Enchanted Story</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text animate-on-scroll">
+                <h3>A Hidden Paradise</h3>
+                <p>Nestled behind an unassuming ivy-covered gate lies The Secret Garden Café, a magical retreat discovered by our founders, Evelyn and Theodore Greenleaf, during their travels through Europe in 2010.</p>
+                <p>What began as an abandoned Victorian greenhouse has blossomed into a sanctuary where nature and gastronomy intertwine.</p>
+            </div>
+            <div class="gci">
+                <img src="gci.jpeg" alt="Garden Cafe">
+                <img src="gci1.jpeg" alt="Garden Cafe">
+                <img src="gci2.jpeg" alt="Garden Cafe">
+            <div class="philosophy animate-on-scroll">
+                <h3>Our Philosophy</h3>
+                <p>We believe in the magic of fresh, seasonal ingredients sourced from our own garden and local organic farms. Every dish tells a story, every cocktail casts a spell, and every visit becomes a cherished memory.</p>
+                <div class="values">
+                    <div class="value-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>Sustainability</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Passion</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-magic"></i>
+                        <span>Magic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="section-header">
+            <h2>Our Enchanted Menu</h2>
+            <div class="divider"></div>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Main Course">Main Course</button>
+                <button class="filter-btn" data-filter="Desserts">Desserts</button>
+                
+            </div>
+        </div>
+        <div class="menu-categories">
+            <!-- Starters -->
+            <div class="menu-category">
+                <h3 class="category-title">Starters <i class="fas fa-chevron-down"></i></h3>
+                <div class="category-items">
+                    <div class="menu-item" data-category="Main Course">
+                        <div class="item-header">
+                            <h4>White Sauce Pasta</h4>
+                            <span class="price">₹489</span>
+                        </div>
+                        <p class="item-description">Creamy and cheesy white sauce pasta, served with garlic bread</p>
+                        <img src="white sauce pasta.jpeg" alt="White Sauce Pasta">
+                    </div>
+                    <!-- More items... -->
+                    <div class="menu-item" data-category="Main Course">
+                        <div class="item-header">
+                            <h4>Classic Club Sandwich</h4>
+                            <span class="price">₹300</span>
+                        </div>
+                        <p class="item-description">Hearty sandwich with crispy, golden bread.</p>
+                        <img src="classic club sandwich.jpeg" alt="Classic Club Sandwich">
+                    </div>
+                    <div class="menu-item" data-category="Main Course">
+                        <div class="item-header">
+                            <h4>Italian Pizza</h4>
+                            <span class="price">₹600</span>
+                        </div>
+                        <p class="item-description">Wood-fired pizza with bold Mediterranean flavors</p>
+                        <img src="italian pizza.jpeg" alt="Italian Pizza">
+                    </div>
+
+                    <div class="menu-item" data-category="Desserts">
+                        <div class="item-header">
+                            <h4>Choco Lava Cake</h4>
+                            <span class="price">₹380</span>
+                        </div>
+                        <p class="item-description">Soft cake, melted chocolate surprise inside.</p>
+                        <img src="Choco Lava Cake.jpeg" alt="Choco Lava Cake">
+                    </div>
+
+                    <div class="menu-item" data-category="Desserts">
+                        <div class="item-header">
+                            <h4>Blueberry Cheesecake</h4>
+                            <span class="price">₹400</span>
+                        </div>
+                        <p class="item-description">Velvety cheesecake meets juicy blueberry glaze.</p>
+                        <img src="Blueberry Cheesecake.jpeg" alt="Blueberry Cheesecake">
+                    </div>
+
+                    <div class="menu-item" data-category="Desserts">
+                        <div class="item-header">
+                            <h4>Hot Chocolate with sizzling Brownie</h4>
+                            <span class="price">₹460</span>
+                        </div>
+                        <p class="item-description">Rich brownie meets steamy chocolate indulgence.</p>
+                        <img src="Hot Chocolate with sizzling Brownie.jpeg" alt="Hot Chocolate with sizzling Brownie">
+                    </div>
+
+                </div>
+            </div>
+            <!-- Mains, Desserts, Drinks sections similarly structured -->
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="section-header">
+            <h2>Garden Whispers</h2>
+            <div class="divider"></div>
+            <p>Take a glimpse into our magical world</p>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="download.jpeg" alt="Secret Garden Café">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="download (1).jpeg" alt="Secret Garden Café">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="download (2).jpeg" alt="Secret Garden Café">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+
+            <!-- More gallery items... -->
+        </div>
+        <!-- Lightbox Modal -->
+        <div class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div class="lightbox-caption"></div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="reservations">
+        <div class="section-header">
+            <h2>Reserve Your Magical Experience</h2>
+            <div class="divider"></div>
+        </div>
+        <form id="reservation-form" class="reservation-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <!-- More form fields... -->
+            <button type="submit" class="cta-button">Book Your Table</button>
+        </form>
+        <div class="reservation-success">
+            <i class="fas fa-check-circle"></i>
+            <h3>Your reservation has been received!</h3>
+            <p>We've sent a confirmation to your email. See you soon in our garden!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Find Your Way to Us</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i>Plot No. 42, Green Valley Lane
+                        Near Lotus Park, Jubilee Hills
+                        Hyderabad, Telangana – 500033
+                        India</p>
+                    <p><i class="fas fa-phone"></i> +91 98491 23678</p>
+                    <p><i class="fas fa-envelope"></i> hello@secretgardencafe.com</p>
+                </address>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="hours">
+                    <h4>Opening Hours</h4>
+                    <p>Monday - Friday: 10am - 10pm</p>
+                    <p>Weekends: 9am - 11pm</p>
+                </div>
+            </div>
+            <div class="contact-map">
+                <img src="location.jpeg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">The Secret Garden Café</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Careers</a>
+                <a href="#">Gift Cards</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Join Our Magical Circle</h4>
+                <form>
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2023 The Secret Garden Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Today's Special Modal -->
+    <div class="special-modal">
+        <div class="special-content">
+            <span class="close-special">&times;</span>
+            <h3>Today's Enchanted Special</h3>
+            <div class="special-item">
+                <img src="moonlight pasta.jpeg" alt="Today's Special">
+                <div class="special-details">
+                    <h4>Moonlight Pasta</h4>
+                    <p>Squid ink pasta with cherry tomatoes, and a sprinkle of edible gold dust</p>
+                    <p class="special-price">₹430 - Available until midnight</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
